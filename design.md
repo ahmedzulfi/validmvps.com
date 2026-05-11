@@ -259,7 +259,7 @@ The palette is built on two anchors and a single accent:
 
 - **Deep Forest (`#0D1B15`)** — The primary dark. Used for all text on light backgrounds, the hero section, the Contact section background, and the footer. It reads as almost-black but carries a warm, organic undertone that prevents harshness. This color signals trust and depth.
 - **Page Wash (`#F6F7FF`)** — A near-white with the faintest blue-lavender cast. Used as the background for all inner pages (blog, pricing, services). It is light enough to read as white but creates a distinct, cooler-temperature contrast against pure white cards, giving the grid depth without borders.
-- **Acid Green (`#D1FC71`)** — The *only* accent color in the entire system. It is a high-chroma, high-luminosity chartreuse that creates instant visual stops on a dark or light background. It is used exclusively for: primary CTA buttons, active navigation states, FAQ accordion icons, and the "Read More" pill on blog cards. No other accent color should ever be introduced.
+- **Acid Green (`#D1FC71`)** — The _only_ accent color in the entire system. It is a high-chroma, high-luminosity chartreuse that creates instant visual stops on a dark or light background. It is used exclusively for: primary CTA buttons, active navigation states, FAQ accordion icons, and the "Read More" pill on blog cards. No other accent color should ever be introduced.
 - **Card White (`#FFFFFF`)** — Blog cards, the navbar pill, and modal surfaces sit on pure white, floating above the `#F6F7FF` wash with a subtle elevation shadow.
 
 The contrast between the deep forest and acid green is the brand's signature. It signals energy and technical confidence simultaneously.
@@ -341,7 +341,7 @@ The system has two primary material expressions:
 ValidMVPs implements **IndexNow** for real-time search engine discovery. This ensures that every new blog post, service update, or structural change is indexed by Bing, Yandex, and other supporting search engines within minutes, rather than days or weeks.
 
 - **API Key:** `4084d4668e0140aa8586691bbabd75e2`
-- **Key Location:** `https://validmvps.com/4084d4668e0140aa8586691bbabd75e2.txt`
+- **Key Location:** `https://validmvps.vercel.app/4084d4668e0140aa8586691bbabd75e2.txt`
 - **Automation:** The indexing process is integrated into the build pipeline. Running `npm run build` automatically triggers `scripts/indexnow.mjs`, which parses the generated sitemap and notifies search engines of all active URLs.
 - **Sitemap:** A dynamic sitemap is generated at build time via `@astrojs/sitemap`, ensuring the indexer always has the latest content list.
 - **Structured Data:** Each page (especially blog posts) includes JSON-LD schema (BlogPosting, Organization) to enhance AI citations and search engine understanding.
