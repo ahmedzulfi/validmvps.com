@@ -1,0 +1,98 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import BlogDetailsHero from "../../components/BlogDetailsHero.astro";
+import BlogProse from "../../components/BlogProse.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import Contact from "../../components/Contact.astro";
+import FAQ from "../../components/FAQ.astro";
+import Footer from "../../components/Footer.astro";
+
+const post = {
+  id: "lovable-ai-power-user-guide",
+  data: {
+    title: "The Lovable AI Power-User Guide: 10X Your MVP Velocity",
+    excerpt: "Master the advanced workflows that separate casual vibe-coders from power users. From custom connectors to state management, this is your definitive guide.",
+    publishDate: "2026-05-12",
+    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
+    author: {
+      name: "Ahmed Zulfiqar",
+      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+    },
+  },
+};
+---
+
+<Layout
+  title={`${post.data.title} | ValidMVPs`}
+  description={post.data.excerpt}
+  ogType="article"
+>
+  <script type="application/ld+json" slot="head">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "The Lovable AI Power-User Guide: 10X Your MVP Velocity",
+        "image": "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
+        "author": {
+          "@type": "Person",
+          "name": "Ahmed Zulfiqar"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ValidMVPs",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://validmvps.vercel.app/images/LOGO.png"
+          }
+        },
+        "datePublished": "2026-05-12",
+        "dateModified": "2026-05-12",
+        "description": "Master advanced Lovable AI workflows, custom connectors, and state management."
+      }
+    ]
+  </script>
+
+  <div class="flex flex-col min-h-screen bg-[#F6F7FF]">
+    <Navbar />
+    <BlogDetailsHero
+      title={post.data.title}
+      excerpt={post.data.excerpt}
+      authorName={post.data.author.name}
+      authorImage={post.data.author.image}
+      publishDate={new Date(post.data.publishDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+      featuredImage={post.data.image}
+    />
+    <BlogProse>
+      <div class="flex flex-col items-center gap-10 md:gap-20 w-full mx-auto text-[#0D1B15]">
+        <div class="w-full">
+          <div class="bg-white p-8 rounded-[20px] shadow-sm mb-12 border border-[#0D1B15]/5">
+            <h3 class="font-['Bricolage_Grotesque'] font-medium text-2xl mb-4">TL;DR: Power User Secrets</h3>
+            <ul class="space-y-2 text-lg font-inter">
+              <li>🛠️ <strong>Custom Connectors:</strong> Bridge any API in seconds.</li>
+              <li>⚡ <strong>State Management:</strong> Mastering Lovable's internal context.</li>
+              <li>🛡️ <strong>Security:</strong> Implementing RLS from day one.</li>
+              <li>📈 <strong>Scaling:</strong> When to move from vibe-code to hard-code.</li>
+            </ul>
+          </div>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            Lovable AI has redefined what it means to build an MVP in 2026. But for many founders, the journey stops at basic UI generation. To truly 10X your velocity, you need to understand the **Power-User Workflow**. This guide dives into the advanced techniques used by technical founders at ValidMVPs to ship production-grade apps at the speed of thought.
+          </p>
+          <h2 class="font-['Bricolage_Grotesque'] font-medium text-3xl md:text-[48px] tracking-[-1px] md:tracking-[-3px] leading-[1.2] mb-4 mt-8">Beyond the Basics: Custom Connectors</h2>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            The real power of Lovable isn't just in the code it generates, but in how it connects to your existing ecosystem. Custom API connectors allow you to bridge Lovable with anything from internal databases to specialized AI agents like Hermes. By mastering the <strong>Connector Hub</strong>, you can build complex, data-driven applications that go far beyond simple CRUD operations.
+          </p>
+          <h2 class="font-['Bricolage_Grotesque'] font-medium text-3xl md:text-[48px] tracking-[-1px] md:tracking-[-3px] leading-[1.2] mb-4 mt-12">Orchestrating Complex State</h2>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            As your app grows, managing state becomes the primary bottleneck. Power users don't just rely on Lovable's defaults; they architect state using patterns that allow for easy refactoring. Whether it's complex multi-step forms or real-time data sync via Supabase, understanding how to "prompt" for clean state management is the secret to a maintainable codebase.
+          </p>
+        </div>
+      </div>
+    </BlogProse>
+    <RelatedPosts currentSlug={post.id} />
+    <Contact />
+    <FAQ />
+    <Footer />
+  </div>
+</Layout>

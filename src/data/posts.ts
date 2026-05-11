@@ -221,4 +221,121 @@ export const posts = [
       },
     },
   },
+  {
+    id: "lovable-ai-power-user-guide",
+    data: {
+      title: "The Lovable AI Power-User Guide: 10X Your MVP Velocity",
+      excerpt: "Master the advanced workflows that separate casual vibe-coders from power users. From custom connectors to state management, this is your definitive guide.",
+      publishDate: "2026-05-12",
+      image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
+  {
+    id: "meta-ads-lovable-integration-error-fix",
+    data: {
+      title: "Meta Ads Integration: Fixing Auth & Permission Errors in Lovable",
+      excerpt: "Struggling with Meta Ads connection errors? This guide breaks down the most common auth pitfalls and how to resolve them for a seamless integration.",
+      publishDate: "2026-05-13",
+      image: "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
+  {
+    id: "supabase-rls-lovable-hardening",
+    data: {
+      title: "Supabase RLS for Lovable: Hardening Your AI-Built Backend",
+      excerpt: "Vibe coding gets you to market, but security keeps you there. Learn how to implement Row Level Security (RLS) in Supabase to protect your Lovable app's data.",
+      publishDate: "2026-05-14",
+      image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
+  {
+    id: "publishing-lovable-apps-mobile-stores",
+    data: {
+      title: "Publishing Lovable Apps to Mobile Stores: The 2026 Blueprint",
+      excerpt: "Turn your web app into a native mobile experience. A comprehensive guide to publishing Lovable apps to the Apple App Store and Google Play Store.",
+      publishDate: "2026-05-15",
+      image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
+  {
+    id: "wrapping-lovable-capacitor-guide",
+    data: {
+      title: "Wrapping Lovable with Capacitor: A Step-by-Step Tutorial",
+      excerpt: "Learn how to take your Lovable web app and turn it into a native iOS and Android application using Capacitor.",
+      publishDate: "2026-05-16",
+      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
+  {
+    id: "internal-business-apps-lovable-mobile",
+    data: {
+      title: "Internal Business Apps: Mobile Distribution Without App Store Submission",
+      excerpt: "Building internal tools? Learn how to deploy your Lovable apps to your team's mobile devices without going through the public App Store.",
+      publishDate: "2026-05-17",
+      image: "https://images.pexels.com/photos/3183158/pexels-photo-3183158.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
+  {
+    id: "cost-of-building-with-ai-lovable-cloud",
+    data: {
+      title: "The Cost of Building with AI: Decoding Lovable Cloud Pricing",
+      excerpt: "Building with AI is faster, but is it cheaper? We break down the real-world costs of Lovable Cloud and how to budget for your next build sprint.",
+      publishDate: "2026-05-18",
+      image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
+  {
+    id: "managing-lovable-compute-costs",
+    data: {
+      title: "Managing Lovable Compute Costs: A Usage-Based Survival Guide",
+      excerpt: "Unexpected charges on your Lovable bill? Learn how to audit your usage, optimize your prompts, and keep your compute costs under control.",
+      publishDate: "2026-05-19",
+      image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
+  {
+    id: "first-10-customers-pricing-psychology-ai-mvp",
+    data: {
+      title: "First 10 Customers: Pricing Psychology for AI-First Startups",
+      excerpt: "Should you give early adopters a discount? How do you price an AI-built MVP? We explore the psychology of early customer acquisition in the age of AI.",
+      publishDate: "2026-05-20",
+      image: "https://images.pexels.com/photos/3183191/pexels-photo-3183191.jpeg",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
 ];

@@ -1,0 +1,94 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import BlogDetailsHero from "../../components/BlogDetailsHero.astro";
+import BlogProse from "../../components/BlogProse.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import Contact from "../../components/Contact.astro";
+import FAQ from "../../components/FAQ.astro";
+import Footer from "../../components/Footer.astro";
+
+const post = {
+  id: "meta-ads-lovable-integration-error-fix",
+  data: {
+    title: "Meta Ads Integration: Fixing Auth & Permission Errors in Lovable",
+    excerpt: "Struggling with Meta Ads connection errors? This guide breaks down the most common auth pitfalls and how to resolve them for a seamless integration.",
+    publishDate: "2026-05-13",
+    image: "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg",
+    author: {
+      name: "Ahmed Zulfiqar",
+      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+    },
+  },
+};
+---
+
+<Layout
+  title={`${post.data.title} | ValidMVPs`}
+  description={post.data.excerpt}
+  ogType="article"
+>
+  <script type="application/ld+json" slot="head">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Meta Ads Integration: Fixing Auth & Permission Errors in Lovable",
+        "image": "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg",
+        "author": {
+          "@type": "Person",
+          "name": "Ahmed Zulfiqar"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ValidMVPs",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://validmvps.vercel.app/images/LOGO.png"
+          }
+        },
+        "datePublished": "2026-05-13",
+        "dateModified": "2026-05-13",
+        "description": "Troubleshoot Meta Ads connection errors and OAuth permission issues in Lovable AI."
+      }
+    ]
+  </script>
+
+  <div class="flex flex-col min-h-screen bg-[#F6F7FF]">
+    <Navbar />
+    <BlogDetailsHero
+      title={post.data.title}
+      excerpt={post.data.excerpt}
+      authorName={post.data.author.name}
+      authorImage={post.data.author.image}
+      publishDate={new Date(post.data.publishDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+      featuredImage={post.data.image}
+    />
+    <BlogProse>
+      <div class="flex flex-col items-center gap-10 md:gap-20 w-full mx-auto text-[#0D1B15]">
+        <div class="w-full">
+          <div class="bg-white p-8 rounded-[20px] shadow-sm mb-12 border border-[#0D1B15]/5">
+            <h3 class="font-['Bricolage_Grotesque'] font-medium text-2xl mb-4">Fix Checklist</h3>
+            <ul class="space-y-2 text-lg font-inter">
+              <li>🔑 <strong>App Permissions:</strong> Ensure `ads_read` and `ads_management` are toggled.</li>
+              <li>🌐 <strong>Domain Verification:</strong> Your Lovable domain must match your Meta App settings.</li>
+              <li>🔄 <strong>Token Refresh:</strong> How to handle expiration without app crashes.</li>
+            </ul>
+          </div>
+          <h2 class="font-['Bricolage_Grotesque'] font-medium text-3xl md:text-[48px] tracking-[-1px] md:tracking-[-3px] leading-[1.2] mb-4 mt-8">The Meta Auth Nightmare</h2>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            Integrating Meta Ads with a Lovable-built application should be straightforward, but auth errors are the #1 complaint in the developer community. Usually, the issue isn't in your code, but in the **Meta Developer Portal** settings. This guide walkthrough the exact steps to verify your domain and configure your OAuth flow to prevent the dreaded "Permission Denied" error.
+          </p>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            For more advanced integration techniques, check out our <a href="/blog/lovable-ai-power-user-guide/" class="underline font-bold">Lovable AI Power-User Guide</a>.
+          </p>
+
+        </div>
+      </div>
+    </BlogProse>
+    <RelatedPosts currentSlug={post.id} />
+    <Contact />
+    <FAQ />
+    <Footer />
+  </div>
+</Layout>

@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import BlogDetailsHero from "../../components/BlogDetailsHero.astro";
+import BlogProse from "../../components/BlogProse.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import Contact from "../../components/Contact.astro";
+import FAQ from "../../components/FAQ.astro";
+import Footer from "../../components/Footer.astro";
+
+const post = {
+  id: "supabase-rls-lovable-hardening",
+  data: {
+    title: "Supabase RLS for Lovable: Hardening Your AI-Built Backend",
+    excerpt: "Vibe coding gets you to market, but security keeps you there. Learn how to implement Row Level Security (RLS) in Supabase to protect your Lovable app's data.",
+    publishDate: "2026-05-14",
+    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
+    author: {
+      name: "Ahmed Zulfiqar",
+      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+    },
+  },
+};
+---
+
+<Layout
+  title={`${post.data.title} | ValidMVPs`}
+  description={post.data.excerpt}
+  ogType="article"
+>
+  <div class="flex flex-col min-h-screen bg-[#F6F7FF]">
+    <Navbar />
+    <BlogDetailsHero
+      title={post.data.title}
+      excerpt={post.data.excerpt}
+      authorName={post.data.author.name}
+      authorImage={post.data.author.image}
+      publishDate={new Date(post.data.publishDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+      featuredImage={post.data.image}
+    />
+    <BlogProse>
+      <div class="flex flex-col items-center gap-10 md:gap-20 w-full mx-auto text-[#0D1B15]">
+        <div class="w-full">
+          <div class="bg-white p-8 rounded-[20px] shadow-sm mb-12 border border-[#0D1B15]/5">
+            <h3 class="font-['Bricolage_Grotesque'] font-medium text-2xl mb-4">Security Essentials</h3>
+            <ul class="space-y-2 text-lg font-inter">
+              <li>🔒 <strong>Default Deny:</strong> Why you should always start with RLS enabled.</li>
+              <li>👤 <strong>Auth Context:</strong> Using `auth.uid()` to secure user data.</li>
+              <li>🛡️ <strong>Policy Audits:</strong> How to test your security rules with Claude Code.</li>
+            </ul>
+          </div>
+          <h2 class="font-['Bricolage_Grotesque'] font-medium text-3xl md:text-[48px] tracking-[-1px] md:tracking-[-3px] leading-[1.2] mb-4 mt-8">The "Vibe Debt" of Security</h2>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            When you're building fast with Lovable, it's easy to overlook backend security. But in 2026, a data breach is a death sentence for a startup. **Row Level Security (RLS)** is your first line of defense. This guide shows you how to translate your business requirements into robust Supabase policies that ensure users only see the data they're supposed to.
+          </p>
+        </div>
+      </div>
+    </BlogProse>
+    <RelatedPosts currentSlug={post.id} />
+    <Contact />
+    <FAQ />
+    <Footer />
+  </div>
+</Layout>

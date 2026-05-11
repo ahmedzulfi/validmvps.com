@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import BlogDetailsHero from "../../components/BlogDetailsHero.astro";
+import BlogProse from "../../components/BlogProse.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import Contact from "../../components/Contact.astro";
+import FAQ from "../../components/FAQ.astro";
+import Footer from "../../components/Footer.astro";
+
+const post = {
+  id: "publishing-lovable-apps-mobile-stores",
+  data: {
+    title: "Publishing Lovable Apps to Mobile Stores: The 2026 Blueprint",
+    excerpt: "Turn your web app into a native mobile experience. A comprehensive guide to publishing Lovable apps to the Apple App Store and Google Play Store.",
+    publishDate: "2026-05-15",
+    image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg",
+    author: {
+      name: "Ahmed Zulfiqar",
+      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+    },
+  },
+};
+---
+
+<Layout
+  title={`${post.data.title} | ValidMVPs`}
+  description={post.data.excerpt}
+  ogType="article"
+>
+  <div class="flex flex-col min-h-screen bg-[#F6F7FF]">
+    <Navbar />
+    <BlogDetailsHero
+      title={post.data.title}
+      excerpt={post.data.excerpt}
+      authorName={post.data.author.name}
+      authorImage={post.data.author.image}
+      publishDate={new Date(post.data.publishDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+      featuredImage={post.data.image}
+    />
+    <BlogProse>
+      <div class="flex flex-col items-center gap-10 md:gap-20 w-full mx-auto text-[#0D1B15]">
+        <div class="w-full">
+          <div class="bg-white p-8 rounded-[20px] shadow-sm mb-12 border border-[#0D1B15]/5">
+            <h3 class="font-['Bricolage_Grotesque'] font-medium text-2xl mb-4">The Mobile Blueprint</h3>
+            <ul class="space-y-2 text-lg font-inter">
+              <li>📱 <strong>Hybrid Architecture:</strong> Why wrapping is the right choice for 90% of MVPs.</li>
+              <li>🍏 <strong>App Store Guidelines:</strong> Navigating Apple's strict review process.</li>
+              <li>🚀 <strong>OTA Updates:</strong> Updating your app without re-submission.</li>
+            </ul>
+          </div>
+          <h2 class="font-['Bricolage_Grotesque'] font-medium text-3xl md:text-[48px] tracking-[-1px] md:tracking-[-3px] leading-[1.2] mb-4 mt-8">The "Last Mile" of Development</h2>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            Building a web app in Lovable is fast, but getting it onto a user's home screen is where most founders get stuck. In 2026, the gap between web and native has narrowed significantly. By using a hybrid wrapping strategy, you can maintain a single codebase while providing the premium experience users expect from the App Store.
+          </p>
+        </div>
+      </div>
+    </BlogProse>
+    <RelatedPosts currentSlug={post.id} />
+    <Contact />
+    <FAQ />
+    <Footer />
+  </div>
+</Layout>

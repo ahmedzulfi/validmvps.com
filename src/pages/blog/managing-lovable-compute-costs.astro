@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import BlogDetailsHero from "../../components/BlogDetailsHero.astro";
+import BlogProse from "../../components/BlogProse.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import Contact from "../../components/Contact.astro";
+import FAQ from "../../components/FAQ.astro";
+import Footer from "../../components/Footer.astro";
+
+const post = {
+  id: "managing-lovable-compute-costs",
+  data: {
+    title: "Managing Lovable Compute Costs: A Usage-Based Survival Guide",
+    excerpt: "Unexpected charges on your Lovable bill? Learn how to audit your usage, optimize your prompts, and keep your compute costs under control.",
+    publishDate: "2026-05-19",
+    image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg",
+    author: {
+      name: "Ahmed Zulfiqar",
+      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+    },
+  },
+};
+---
+
+<Layout
+  title={`${post.data.title} | ValidMVPs`}
+  description={post.data.excerpt}
+  ogType="article"
+>
+  <div class="flex flex-col min-h-screen bg-[#F6F7FF]">
+    <Navbar />
+    <BlogDetailsHero
+      title={post.data.title}
+      excerpt={post.data.excerpt}
+      authorName={post.data.author.name}
+      authorImage={post.data.author.image}
+      publishDate={new Date(post.data.publishDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+      featuredImage={post.data.image}
+    />
+    <BlogProse>
+      <div class="flex flex-col items-center gap-10 md:gap-20 w-full mx-auto text-[#0D1B15]">
+        <div class="w-full">
+          <div class="bg-white p-8 rounded-[20px] shadow-sm mb-12 border border-[#0D1B15]/5">
+            <h3 class="font-['Bricolage_Grotesque'] font-medium text-2xl mb-4">Survival Tactics</h3>
+            <ul class="space-y-2 text-lg font-inter">
+              <li>🔍 <strong>Usage Audit:</strong> Identifying the "expensive" prompts and features.</li>
+              <li>⚡ <strong>Prompt Optimization:</strong> Reducing token waste without losing quality.</li>
+              <li>🛡️ <strong>Limits & Alerts:</strong> How to set up billing safeguards in Lovable Cloud.</li>
+            </ul>
+          </div>
+          <h2 class="font-['Bricolage_Grotesque'] font-medium text-3xl md:text-[48px] tracking-[-1px] md:tracking-[-3px] leading-[1.2] mb-4 mt-8">The Shock of Usage-Based Billing</h2>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            It happens to every founder eventually: a week of high-velocity building leads to a larger-than-expected bill. In 2026, managing compute costs is as much a technical skill as writing code. This survival guide provides actionable strategies for auditing your Lovable usage and optimizing your build process to ensure every token spent translates into business value.
+          </p>
+        </div>
+      </div>
+    </BlogProse>
+    <RelatedPosts currentSlug={post.id} />
+    <Contact />
+    <FAQ />
+    <Footer />
+  </div>
+</Layout>

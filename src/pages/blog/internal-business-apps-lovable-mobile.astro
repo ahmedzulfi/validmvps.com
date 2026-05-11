@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import BlogDetailsHero from "../../components/BlogDetailsHero.astro";
+import BlogProse from "../../components/BlogProse.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import Contact from "../../components/Contact.astro";
+import FAQ from "../../components/FAQ.astro";
+import Footer from "../../components/Footer.astro";
+
+const post = {
+  id: "internal-business-apps-lovable-mobile",
+  data: {
+    title: "Internal Business Apps: Mobile Distribution Without App Store Submission",
+    excerpt: "Building internal tools? Learn how to deploy your Lovable apps to your team's mobile devices without going through the public App Store.",
+    publishDate: "2026-05-17",
+    image: "https://images.pexels.com/photos/3183158/pexels-photo-3183158.jpeg",
+    author: {
+      name: "Ahmed Zulfiqar",
+      image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+    },
+  },
+};
+---
+
+<Layout
+  title={`${post.data.title} | ValidMVPs`}
+  description={post.data.excerpt}
+  ogType="article"
+>
+  <div class="flex flex-col min-h-screen bg-[#F6F7FF]">
+    <Navbar />
+    <BlogDetailsHero
+      title={post.data.title}
+      excerpt={post.data.excerpt}
+      authorName={post.data.author.name}
+      authorImage={post.data.author.image}
+      publishDate={new Date(post.data.publishDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+      featuredImage={post.data.image}
+    />
+    <BlogProse>
+      <div class="flex flex-col items-center gap-10 md:gap-20 w-full mx-auto text-[#0D1B15]">
+        <div class="w-full">
+          <div class="bg-white p-8 rounded-[20px] shadow-sm mb-12 border border-[#0D1B15]/5">
+            <h3 class="font-['Bricolage_Grotesque'] font-medium text-2xl mb-4">Distribution Strategies</h3>
+            <ul class="space-y-2 text-lg font-inter">
+              <li>🌐 <strong>PWA Power:</strong> Why Progressive Web Apps are the king of internal tools.</li>
+              <li>🏢 <strong>Enterprise Distribution:</strong> Using TestFlight and Firebase App Distribution for internal teams.</li>
+              <li>🛡️ <strong>MDM Solutions:</strong> Integrating with Mobile Device Management for corporate security.</li>
+            </ul>
+          </div>
+          <h2 class="font-['Bricolage_Grotesque'] font-medium text-3xl md:text-[48px] tracking-[-1px] md:tracking-[-3px] leading-[1.2] mb-4 mt-8">Internal Speed Over Public Friction</h2>
+          <p class="text-lg md:text-[22px] leading-relaxed md:leading-[1.6em] mb-8 font-inter">
+            For internal business solutions, the friction of a public App Store submission is often unnecessary. In 2026, technical teams are opting for faster distribution methods that allow for immediate updates and tighter security controls. This guide explores how to leverage PWA technology and enterprise distribution tools to get your Lovable-built solutions into the hands of your staff without the wait.
+          </p>
+        </div>
+      </div>
+    </BlogProse>
+    <RelatedPosts currentSlug={post.id} />
+    <Contact />
+    <FAQ />
+    <Footer />
+  </div>
+</Layout>
