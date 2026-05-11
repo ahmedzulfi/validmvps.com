@@ -207,4 +207,18 @@ export const posts = [
         "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg",
     },
   },
+  {
+    id: "multi-agent-lovable-integration-hermes-openclaw",
+    data: {
+      title: "How to Connect AI Agents to Lovable: The Complete Integration Guide (Hermes & OpenClaw)",
+      excerpt:
+        "MVPs are no longer just static apps—they are living, agentic systems. Learn how to bridge Lovable's UI with the learning power of Hermes and the multi-channel breadth of OpenClaw.",
+      publishDate: "2026-05-11",
+      image: "/images/blog/agent-integration.png",
+      author: {
+        name: "Ahmed Zulfiqar",
+        image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      },
+    },
+  },
 ];
