@@ -3,8 +3,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const HOST = 'validmvps.vercel.app';
-const KEY = '57d4b41ab65944969c02ea1af5f5c652';
+const HOST = 'validmvps.com';
+const KEY = '4084d4668e0140aa8586691bbabd75e2';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const SITEMAP_PATH = path.join(__dirname, '../dist/sitemap-0.xml');
 
@@ -28,7 +28,7 @@ async function submitIndexNow() {
     
     console.log(`Submitting ${urlList.length} URLs to IndexNow...`);
 
-    const response = await fetch('https://api.indexnow.org/IndexNow', {
+    const response = await fetch('https://www.bing.com/IndexNow', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8'

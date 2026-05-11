@@ -335,3 +335,13 @@ The system has two primary material expressions:
 - Scroll reveal animations are wrapped in `@media (prefers-reduced-motion: no-preference)`, so users who have reduced motion enabled see static content.
 - Navigation active states are communicated with both color change and a visible dot indicator — not color alone.
 - The mobile navigation overlay traps focus within its card when open, and `aria-expanded` is toggled on all accordion and dropdown triggers.
+
+## SEO & Real-time Indexing
+
+ValidMVPs implements **IndexNow** for real-time search engine discovery. This ensures that every new blog post, service update, or structural change is indexed by Bing, Yandex, and other supporting search engines within minutes, rather than days or weeks.
+
+- **API Key:** `4084d4668e0140aa8586691bbabd75e2`
+- **Key Location:** `https://validmvps.com/4084d4668e0140aa8586691bbabd75e2.txt`
+- **Automation:** The indexing process is integrated into the build pipeline. Running `npm run build` automatically triggers `scripts/indexnow.mjs`, which parses the generated sitemap and notifies search engines of all active URLs.
+- **Sitemap:** A dynamic sitemap is generated at build time via `@astrojs/sitemap`, ensuring the indexer always has the latest content list.
+- **Structured Data:** Each page (especially blog posts) includes JSON-LD schema (BlogPosting, Organization) to enhance AI citations and search engine understanding.

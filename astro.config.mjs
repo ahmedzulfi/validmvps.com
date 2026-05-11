@@ -9,7 +9,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://validmvps.vercel.app',
+  site: 'https://validmvps.com',
   trailingSlash: 'always',
   vite: {
     plugins: [tailwindcss()],
